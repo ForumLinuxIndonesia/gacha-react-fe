@@ -1,52 +1,41 @@
-import React from "react";
-import Button from "./index";
+import React from 'react'
+import Button from '../components/elements/Button/Button'
 
-const Preview = () => {
+function Preview() {
     return (
-        <>
-            <div className="container">
-                <div className="space-x-4 space-y-6">
-                    <Button label="Get Started" />
-                    <Button color="secondary" label="Get Started" />
-                    <Button color="dark" label="Get Started" />
-                    {/*  */}
-                    <Button roundedLg label="Get Started" />
-                    <Button roundedLg color="secondary" label="Get Started" />
-                    <Button roundedLg color="dark" label="Get Started" />
-                    {/*  */}
-                    <Button roundedFull label="Get Started" />
-                    <Button roundedFull color="secondary" label="Get Started" />
-                    <Button roundedFull color="dark" label="Get Started" />
-                    {/*  */}
-                    <Button outline danger roundedLg label="Get Started" />
-                    <Button
-                        outline
-                        info
-                        roundedLg
-                        color="secondary"
-                        label="Get Started"
-                    />
-                    <Button outline warning roundedLg color="dark" label="Get Started" />
-                    {/*  */}
-                    <Button outline danger roundedFull label="Get Started" />
-                    <Button
-                        outline
-                        info
-                        roundedFull
-                        color="secondary"
-                        label="Get Started"
-                    />
-                    <Button
-                        outline
-                        warning
-                        roundedFull
-                        color="dark"
-                        label="Get Started"
-                    />
-                </div>
+        <div className="container px-5 py-5 flex flex-col gap-5">
+            <div className="flex items-center gap-5 mb-3">
+                <Button type="button" size="sm" variant="danger" outlined rounded="lg" label="SM Button" />
+                <Button type="button" size="md" variant="danger" outlined rounded="lg" label="MD Button" />
+                <Button type="button" size="lg" variant="danger" outlined rounded="lg" label="LG Button" />
+                <Button type="button" size="xl" variant="danger" outlined rounded="lg" label="XL Button" />
             </div>
-        </>
-    );
-};
+            <div className="flex items-center gap-5 mb-3">
+                <Button type="button" size="sm" variant="success" outlined rounded="lg" label="SM Button" />
+                <Button type="button" size="md" variant="success" outlined rounded="lg" label="MD Button" />
+                <Button type="button" size="lg" variant="success" outlined rounded="lg" label="LG Button" />
+                <Button type="button" size="xl" variant="success" outlined rounded="lg" label="XL Button" />
+            </div>
+            <div className="flex items-center gap-5 mb-3">
+                <Button type="button" size="sm" outlined variant="warning" rounded="lg" label="SM Button" />
+                <Button type="button" size="md" outlined variant="warning" rounded="lg" label="MD Button" />
+                <Button type="button" size="lg" outlined variant="warning" rounded="lg" label="LG Button" />
+                <Button type="button" size="xl" outlined variant="warning" rounded="lg" label="XL Button" />
+            </div>
+            <div className="flex items-center gap-5 mb-3">
+                <Button type="button" size="sm" variant="info" outlined rounded="lg" label="SM Button" />
+                <Button type="button" size="md" variant="info" outlined rounded="lg" label="MD Button" />
+                <Button type="button" size="lg" variant="info" outlined rounded="lg" label="LG Button" />
+                <Button type="button" size="xl" variant="info" outlined rounded="lg" label="XL Button" />
+            </div>
+            <div className="flex items-center gap-5 mb-3">
+                <Button type="button" size="sm" variant="indigo" outlined rounded="lg" label="SM Button" />
+                <Button type="button" size="md" variant="indigo" outlined rounded="lg" label="MD Button" />
+                <Button type="button" size="lg" variant="indigo" outlined rounded="lg" label="LG Button" />
+                <Button type="button" size="xl" variant="indigo" outlined rounded="lg" label="XL Button" />
+            </div>
+        </div>
+    )
+}
 
 export default Preview;
