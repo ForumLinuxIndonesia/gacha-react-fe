@@ -6,10 +6,6 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    extend: {
-      backgroundImage: theme => ({
-      })
-    },
     screens: {
       sm: "640px",
       md: "768px",
@@ -20,6 +16,7 @@ module.exports = {
     colors: {
       transparent: "transparent",
       current: "currentColor",
+      primary: "#3A80F6",
 
       black: "#0e1133",
       white: colors.white,
@@ -101,6 +98,17 @@ module.exports = {
         800: "#0b2e5c",
         900: "#05172e"
       },
+      cyan: {
+        100: "#cffafe",
+        200: "#a5f3fc",
+        300: "#67e8f9",
+        400: "#22d3ee",
+        500: "#06b6d4",
+        600: "#0891b2",
+        700: "#0e7490",
+        800: "#155e75",
+        900: "#164e63"
+      },
       indigo: {
         100: "#ebf4ff",
         200: "#c3dafe",
@@ -111,17 +119,6 @@ module.exports = {
         700: "#4c51bf",
         800: "#434190",
         900: "#3c366b",
-      },
-      cyan: {
-        100: "#cffafe",
-        200: "#a5f3fc",
-        300: "#67e8f9",
-        400: "#22d3ee",
-        500: "#06b6d4",
-        600: "#0891b2",
-        700: "#0e7490",
-        800: "#155e75",
-        900: "#164e63",
       },
       purple: {
         100: "#faf5ff",
