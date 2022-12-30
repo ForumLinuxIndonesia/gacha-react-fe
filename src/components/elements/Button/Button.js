@@ -77,8 +77,7 @@ function setRounded(rounded) {
 const Button = React.memo(function Button(data) {
 	// Formatted Classes
 	let classList = `text-base flex items-center gap-2 ${data.iconAlignment === "right" ? "flex-row-reverse" : "flex-row"} ${setSize(data.size)} ${setVariant(
-		data.variant,
-		data.outlined
+		data.variant
 	)} ${setRounded(data.rounded)} ${data.className ? data.className : ""}
 	`;
 
