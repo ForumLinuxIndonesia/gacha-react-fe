@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 /**
  *
@@ -11,6 +11,9 @@ function setVariant(variantName) {
 	// Determine
 	switch (variantName) {
 		case "outline-danger":
+		case "primary":
+			bg = `bg-primary hover:bg-blue-600 ${variantName.startsWith("outline-") ? "outline outline-offset-4 outline-primary hover:outline-primary" : ""}`;
+			break;
 		case "danger":
 			bg = `bg-red-500 hover:bg-red-600 ${variantName.startsWith("outline-") ? "outline outline-offset-4 outline-red-500 hover:outline-red-600" : ""}`;
 			break;
@@ -74,7 +77,7 @@ function setRounded(rounded) {
  * @iconAlignment Alignment of icon (left, right) [optional]
  * @className Your custom class gap-2
  */
-const Button = React.memo(function Button(data) {
+const Button = memo(function Button(data) {
 	// Formatted Classes
 	let classList = `text-base flex items-center gap-2 ${data.iconAlignment === "right" ? "flex-row-reverse" : "flex-row"} ${setSize(data.size)} ${setVariant(
 		data.variant
