@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 export default function Header() {
     return (
@@ -7,59 +8,59 @@ export default function Header() {
             <header className="mt-4 bg-transparent sticky-bar">
                 <div className="container bg-transparent">
                     <nav className="flex items-center justify-between py-3 bg-transparent">
-                        <a className="text-3xl font-semibold leading-none" href="index.html">
+                        <NavLink className="text-3xl font-semibold leading-none" href="index.html">
                             <img className="h-10" src="/imgs/logos/logo.svg" alt="" />
-                        </a>
+                        </NavLink>
                         <ul className="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
                             <li className="pt-4 pb-4">
-                                <a href="index.html"
-                                    className="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500">Beranda</a>
+                                <NavLink to="/"
+                                    className="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500">Beranda</NavLink>
                             </li>
                             <li className="pt-4 pb-4">
-                                <a className="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
-                                    href="fitur.html">Fitur</a>
+                                <NavLink className="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                                    to="/fitur">Fitur</NavLink>
                             </li>
                             <li className="pt-4 pb-4">
-                                <a className="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
-                                    href="forum.html">Forum</a>
+                                <NavLink className="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                                    to="/forum">Forum</NavLink>
                             </li>
                             <li className="pt-4 pb-4">
-                                <a className="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
-                                    href="showcase.html">Showcase</a>
+                                <NavLink className="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                                    to="/showcase">Showcase</NavLink>
                             </li>
                             <li className="pt-4 pb-4">
-                                <a className="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
-                                    href="team.html">Team</a>
+                                <NavLink className="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                                    to="/tim">Team</NavLink>
                             </li>
                             <li className="relative pt-4 pb-4 group has-child">
-                                <a className="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500" href="#">Blog</a>
+                                <NavLink className="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500" to="/#">Blog</NavLink>
                                 <ul className="drop-down-menu min-w-200">
                                     <li>
-                                        <a href="blog.html"
+                                        <NavLink to="/blog"
                                             className="text-sm menu-sub-item text-blueGray-600 hover:text-blueGray-500">Category
-                                            1</a>
+                                            1</NavLink>
                                     </li>
                                     <li>
-                                        <a href="blog-2.html"
+                                        <NavLink to="/blog-2"
                                             className="text-sm menu-sub-item text-blueGray-600 hover:text-blueGray-500">Category
-                                            2</a>
+                                            2</NavLink>
                                     </li>
                                     <li>
-                                        <a href="blog-single.html"
+                                        <NavLink to="/blog-single"
                                             className="text-sm menu-sub-item text-blueGray-600 hover:text-blueGray-500">Single
-                                            1</a>
+                                            1</NavLink>
                                     </li>
                                     <li>
-                                        <a href="blog-single-2.html"
+                                        <NavLink to="/blog-single-2"
                                             className="text-sm menu-sub-item text-blueGray-600 hover:text-blueGray-500">Single
-                                            2</a>
+                                            2</NavLink>
                                     </li>
                                 </ul>
                             </li>
                         </ul>
                         <div className="hidden lg:block">
-                            <a className="btn-accent hover-up-2" href="login.html">Masuk</a>
-                            <a className="btn-primary hover-up-2" href="signup.html">Daftar</a>
+                            <NavLink className="btn-accent hover-up-2" to="/masuk">Masuk</NavLink>
+                            <NavLink className="btn-primary hover-up-2" to="/daftar">Daftar</NavLink>
                         </div>
                         <div className="lg:hidden">
                             <button
@@ -78,9 +79,9 @@ export default function Header() {
                 <div className="fixed inset-0 opacity-25 navbar-backdrop bg-blueGray-800"></div>
                 <nav className="fixed top-0 bottom-0 left-0 flex flex-col w-5/6 max-w-sm px-6 py-6 overflow-y-auto transition duration-300 bg-white border-r">
                     <div className="flex items-center mb-8">
-                        <a className="mr-auto text-3xl font-semibold leading-none" href="#">
+                        <NavLink className="mr-auto text-3xl font-semibold leading-none" to="#">
                             <img className="h-10" src="/imgs/logos/logo.svg" alt="" />
-                        </a>
+                        </NavLink>
                         <button className="navbar-close">
                             <svg className="w-6 h-6 cursor-pointer text-blueGray-400 hover:text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -90,48 +91,48 @@ export default function Header() {
                     <div>
                         <ul className="mobile-menu">
                             <li className="mb-1 rounded-xl">
-                                <a className="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl" href="#">Home</a>
+                                <NavLink className="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl" to="/">Home</NavLink>
                             </li>
                             <li className="mb-1 rounded-xl">
-                                <a className="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl" href="about.html">Forum</a>
+                                <NavLink className="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl" to="/forum">Forum</NavLink>
                             </li>
                             <li className="mb-1">
-                                <a className="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="services.html">Showcase</a>
+                                <NavLink className="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" to="/showcase">Showcase</NavLink>
                             </li>
                             <li className="mb-1">
-                                <a className="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="team.html">Team</a>
+                                <NavLink className="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" to="/tim">Team</NavLink>
                             </li>
                             <li className="mb-1 menu-item-has-children rounded-xl"><span className="menu-expand">+</span><span className="menu-expand">+</span>
-                                <a className="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="team.html">Blog</a>
+                                <NavLink className="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" to="/blog">Blog</NavLink>
                                 <ul className="pl-5 dropdown" style={{ display: 'none' }}>
                                     <li>
-                                        <a href="blog.html" className="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Category
-                                            1</a>
+                                        <NavLink to="/blog" className="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Category
+                                            1</NavLink>
                                     </li>
                                     <li>
-                                        <a href="blog-2.html" className="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Category
-                                            2</a>
+                                        <NavLink to="/blog-2" className="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Category
+                                            2</NavLink>
                                     </li>
                                     <li>
-                                        <a href="blog-single.html" className="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Single
-                                            1</a>
+                                        <NavLink to="/blog-single" className="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Single
+                                            1</NavLink>
                                     </li>
                                     <li>
-                                        <a href="blog-single-2.html" className="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Single
-                                            2</a>
+                                        <NavLink to="/blog-single-2" className="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Single
+                                            2</NavLink>
                                     </li>
                                 </ul>
                             </li>
                             <li className="mb-1">
-                                <a className="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="faqs.html">Faqs</a>
+                                <NavLink className="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" to="/faqs">Faqs</NavLink>
                             </li>
                             <li className="mb-1">
-                                <a className="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="contact.html">Contact Us</a>
+                                <NavLink className="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" to="/contact">Contact Us</NavLink>
                             </li>
                         </ul>
                         <div className="pt-6 mt-4 border-t border-blueGray-100">
-                            <a className="block px-4 py-3 mb-3 text-xs font-semibold leading-none text-center text-white bg-blue-400 rounded hover:bg-blue-500" href="#">Sign Up</a>
-                            <a className="block px-4 py-3 mb-2 text-xs font-semibold leading-none text-center text-blue-500 border border-blue-200 rounded hover:text-blue-700 hover:border-blue-300" href="#">Log In</a>
+                            <NavLink className="block px-4 py-3 mb-3 text-xs font-semibold leading-none text-center text-white bg-blue-400 rounded hover:bg-blue-500" to="#">Sign Up</NavLink>
+                            <NavLink className="block px-4 py-3 mb-2 text-xs font-semibold leading-none text-center text-blue-500 border border-blue-200 rounded hover:text-blue-700 hover:border-blue-300" to="#">Log In</NavLink>
                         </div>
                     </div>
                     <div className="mt-auto">

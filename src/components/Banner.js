@@ -16,7 +16,7 @@ export default function Banner() {
                             Is Gacha</span>
                         <h2 className="mt-4 mb-4 text-3xl font-bold md:text-4xl font-heading">
                             <span>Tempat Berbagi</span>
-                            <span className="text-blue-600">Pengalaman</span>
+                            <span className="text-blue-600"> Pengalaman</span>
                             <br />
                             <span>dan informasi.</span>
                         </h2>

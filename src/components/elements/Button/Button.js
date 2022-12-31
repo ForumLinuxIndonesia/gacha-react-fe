@@ -6,6 +6,7 @@ import React, { memo } from "react";
  * @returns
  */
 function setVariant(variantName) {
+	if (!variantName) variantName = "primary";
 	let bg;
 	let text = "text-white";
 	// Determine
@@ -75,12 +76,12 @@ function setRounded(rounded) {
  * @rounded Button rounded
  * @icon Button icon [optional]
  * @iconAlignment Alignment of icon (left, right) [optional]
- * @className Your custom class gap-2
+ * @className Your custom class
  */
 const Button = memo(function Button(data) {
 	// Formatted Classes
-	let classList = `text-base flex items-center gap-2 ${data.iconAlignment === "right" ? "flex-row-reverse" : "flex-row"} ${setSize(data.size)} ${setVariant(
-		data.variant
+	let classList = `flex items-center gap-2 ${data.iconAlignment === "right" ? "flex-row-reverse" : "flex-row"} ${setSize(data.size)} ${setVariant(
+		data.variant, data.outlined
 	)} ${setRounded(data.rounded)} ${data.className ? data.className : ""}
 	`;
 
