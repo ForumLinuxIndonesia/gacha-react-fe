@@ -24,6 +24,7 @@ function App() {
           <Route exact path="/masuk" element={<Login />} />
           <Route exact path="/daftar" element={<Register />} />
           <Route exact path="/ui/button" element={<ButtonPage />} />
+          <Route exact path="*" element={<Home />} />
           {/* <Route path="*" component={NotFound} /> */}
         </Switch>
       </Router>

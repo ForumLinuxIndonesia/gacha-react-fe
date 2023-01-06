@@ -52,7 +52,7 @@ export default function Footer() {
                                 <h5 className="mb-6 text-lg font-bold font-heading">Quick links</h5>
                                 <ul className="space-y-3">
                                     <li>
-                                        <a className="text-lg text-blueGray-400 hover:text-blueGray-500" href="/team">Team</a>
+                                        <a className="text-lg text-blueGray-400 hover:text-blueGray-500" href="/tim">Team</a>
                                     </li>
                                     <li>
                                         <a className="text-lg text-blueGray-400 hover:text-blueGray-500" href="/showcase">Showcase</a>
